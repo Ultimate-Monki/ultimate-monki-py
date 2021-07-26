@@ -669,7 +669,9 @@ async def suggest(ctx, *, suggestion: str = None):
                 url=discord.Embed.Empty,
                 icon_url=ctx.author.avatar_url,
             )
-        await channel.send(embed=embed)
+        sus_monke = await channel.send(embed=embed)
+        sus_monke.add_reaction("✅️")
+        sus_monke.add_reaction("❌️")
         return await ctx.send("Thank You for giving us your feedback!")
     return await ctx.send("`m+suggest <suggestion>`")
 
